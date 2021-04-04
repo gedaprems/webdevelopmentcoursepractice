@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>6-part</title>
+	
+	<script src="./jQuery_files/jquery.min.js.download"></script>
+	
+
+	<style type="text/css">
+		#circle{
+			width: 200px;
+			height: 200px;
+			background-color: rgb(32,169,234);
+			border-radius: 50%;
+			margin-bottom: 5px;
+
+		}
+		.red_square{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			margin-bottom: 5px;
+		}
+	</style>
+</head>
+<body>
+	<h3>Sixth chapter</h3>
+	<p>Animation</p>
+	<h4>EXAMPLE-1</h4>
+	<div id="circle"></div>
+	
+	
+
+	<script type="text/javascript">
+
+		$("#circle").click(function(){
+			
+			$(this).animate({
+			width:"400px",
+			 height:"400px",
+			 marginLeft: "100px"
+			 }, 2000, function(){
+			 	$(this).css("background-color","red");
+			 });  // Animate a Circle and increase with
+ 
+		});
+
+
+		
+
+	</script>
+</body>
+</html>

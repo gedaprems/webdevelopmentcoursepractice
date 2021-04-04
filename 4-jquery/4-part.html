@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3-part</title>
+	
+	<script src="./jQuery_files/jquery.min.js.download"></script>
+	
+
+	<style type="text/css">
+		#circle{
+			width: 200px;
+			height: 200px;
+			background-color: rgb(32,169,234);
+			border-radius: 50%;
+			margin-bottom: 5px;
+
+		}
+		.red_square{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			margin-bottom: 5px;
+		}
+	</style>
+</head>
+<body>
+	<h3>Fourt chapter</h3>
+	<p>Changing Styles</p>
+	<div id="circle"></div>
+	<div class="red_square" ></div>
+	<div class="red_square" ></div>
+	
+
+	<script type="text/javascript">
+
+		/*
+		$("#circle").click(function(){
+			$("#circle").css("display","none");
+			alert("you clicked " + $(this).attr("id"));
+		});
+
+		$(".red_square").click(function(){
+			$(this).css("display","none");
+			alert("you clicked " + $(this).attr("class"));
+		});
+		*/
+
+		/*  AND in case of DIV*/
+
+		$("div").click(function(){
+			if ($(this).attr("id")== "circle") {
+				alert("You Clicked Circle");
+			}else{
+				alert("You Clicked Square");
+			}
+		})
+		
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AJAX</title>
+	
+	<script src="./jQuery/jquery.min.js.download"></script>
+	
+
+</head>
+<body>
+	<h3>Seventh chapter</h3>
+	<p id="para"></p>
+	<script type="text/javascript">
+        $.ajax("info.txt")
+        .done(function(data){
+           $("#para").html(data);
+        })
+        .fail(function(){
+            alert("not find data.")
+        });
+	</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dragable & Dropable</title>
+	
+	<script src="./jQuery_files/jquery.min.js.download"></script>
+
+	<script  src="jquery-ui/jquery-ui.js"></script>
+	<link src="jquery-ui/jquery-ui.css" rel="stylesheet" ></link>
+	<style type="text/css">
+		#draggable{
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+		}
+		#droppable{
+			width: 300px;
+			height:300px;
+			background-color: grey;
+		}
+	</style>
+	
+
+</head>
+<body>
+	<h3>Ninth Chapter</h3>
+	<p>Dragable & Drop</p>
+
+	<div id="draggable"></div>
+	<div id="droppable"></div>
+	
+	
+	<script type="text/javascript">
+
+		$("#draggable").draggable();
+		$("droppable").droppable(
+		{
+			drop: function(event,ui){
+				$("droppable").css("background-color","red");
+			}
+		});
+		
+       
+	</script>
+</body>
+</html>
+

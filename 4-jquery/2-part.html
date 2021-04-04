@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-part</title>
+	
+	<script src="./jQuery_files/jquery.min.js.download"></script>
+	
+
+	<style type="text/css">
+		#circle{
+			width: 200px;
+			height: 200px;
+			background-color: green;
+			border-radius: 50%;
+			margin-bottom: 5px;
+
+		}
+		.red_square{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			margin-bottom: 5px;
+		}
+	</style>
+</head>
+<body>
+	<h3>second chapter</h3>
+
+
+	<div id="circle"></div>
+	<div class="red_square"></div>
+	<div class="red_square"></div>
+
+	<script type="text/javascript">
+		
+			$(".red_square").click(function(){
+			alert("circle was clicked!");
+		});
+
+	</script>
+</body>
+</html>

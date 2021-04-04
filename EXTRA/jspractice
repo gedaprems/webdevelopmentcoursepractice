@@ -1,0 +1,2 @@
+document.write('<input type="submit" onClick="print()" value="Add">');
+		function print(){document.write('<br><input type="text" name="userid"><br><input type="password" name="password" ><br><input type="submit" value="Submit" onClick="print()">');}

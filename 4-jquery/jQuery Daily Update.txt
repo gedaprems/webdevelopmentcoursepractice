@@ -1,0 +1,137 @@
+2-chapter:
+------------
+
+$("#idname").click(function(){
+
+alert("this is the way to acess element");
+});
+
+NOTE: To acess class id or tag : we should use 1) #idname 2).classname 3)tagname
+
+-----------------------------------------------------------------------------------------------
+
+
+3-chapter:
+-----------
+
+$("p").html("This method change the content of p ");
+
+$("p").html(); // This returns the value within p
+
+$("#cirlce).hover(function(){
+//code
+});
+
+$("iframe").attr("src","https://www.ecowebhosting.co.uk");
+
+-------------------------------------------------------------------------------------------------------
+
+4-chapter:
+------------
+
+$("#circle").css("width","450px");  // change the width of ID: cirlce into 450px
+
+$("#circle").css("background-color","red");  // change the background color of ID:circle into red
+
+AND
+
+$("#circle").css("background-color"); // returns the color of ID: circle
+
+
+
+AND
+
+$(".red_square").click(function(){
+			$(this).css("display","none");
+		});
+=    the above function is used to disapear the square having same class 
+
+
+AND
+
+$(".red_square").click(function(){
+			$(this).css("display","none");
+			alert("you clicked " + $(this).attr("id"));
+		});
+		
+
+$(this).attr("id");  // returns the id of element that clicked
+
+
+---------------------------------------------------------------------------------------------
+5-chapter:
+-----------
+
+
+1) $(this).fadeOut();
+2) $(this).hide();
+
+
+www.jQuery.com/fadeout
+
+----------------------------------------------------------------------------------------------
+
+6-chapter:
+------------
+
+Animate():
+
+
+$("circle").click(function(){
+$(this).animate({width:"400px", height:"400px"}, 2000);  // Animate a Circle and increase with
+});                   
+
+//ONLY USE javascript css      
+
+--------------------------------------------------------------------------------------------------
+
+7-chapter:
+
+AJAX
+
+$.get("info.txt",function(data){         // this returns the data present in the file to the alert dailog box
+alert(data);
+});                                                      
+
+
+
+$.ajax("info.txt").done(function(data){  alert(data);  }).fail(function(){ alert("error"); });
+
+// this returns the data present in the info.txt file to alert dialog box and if data is not found the fail funtion runs and return error in dailog box.
+
+
+----------------------------------------------------------------------------------------------------
+
+8-chapter:
+
+Regular Expresion
+
+
+var normal= "this is the text in which the above text is going to search";
+var result= normal.match(reg);
+
+1)    var reg= /is/;
+
+   returns is 
+
+2)    var reg= /Is/;
+
+   returns null
+
+3)    var reg= /Is/i;
+
+   returns is
+
+4)     var reg= /is/g;
+   returns is,is,is
+
+----------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+
+	<style type="text/css">
+		
+		
+	</style>
+
+	
+	
+</head>
+<body >
+
+
+
+
+	<input type="text" id="textInput">
+	<button id="changetext">Change the text</button>
+	<p id="para">This some text</p>
+ 		 
+
+ 		<script type="text/javascript">
+
+
+		window.onload = function(){    
+
+			document.getElementById("changetext").onclick=function(){
+
+
+				var textEntered = "";
+
+				textEntered = document.getElementById("textInput").value;
+				document.getElementById("para").innerHTML += " "+ textEntered;
+			}
+
+
+
+
+
+		}
+
+		
+
+	</script>
+
+ 		 
+	
+
+
+	
+	
+	
+</body>
+</html>

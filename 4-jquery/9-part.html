@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dragable & Resizable</title>
+	
+	<script src="./jQuery_files/jquery.min.js.download"></script>
+
+	<script  src="jquery-ui/jquery-ui.js"></script>
+	<link src="jquery-ui/jquery-ui.css" rel="stylesheet" ></link>
+	<style type="text/css">
+		#resizable{
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+		}
+	</style>
+	
+
+</head>
+<body>
+	<h3>Ninth Chapter</h3>
+	<p>Dragable & Resizable</p>
+
+	<div id="draggable">Drag Me!</div>
+	<div style="width: 400px;height: 400px ; background-color: #aaaaaa;" id="a">
+		<span id="draggable2" style="color: white;">I am stuck!</span>
+		
+	</div>
+	<div id="resizable">
+		
+	</div>
+	
+	<script type="text/javascript">
+
+		$("#draggable").draggable({ axis: "y" });
+		$("#draggable2").draggable({containment: "#a"});
+   		$( "#resizable").resizable();
+  			
+       
+	</script>
+</body>
+</html>

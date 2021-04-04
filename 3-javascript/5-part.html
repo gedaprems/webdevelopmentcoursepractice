@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+
+	<style type="text/css">
+		
+		
+	</style>
+
+	
+	
+</head>
+<body >
+
+	<h3>Guessing Game</h3>
+
+
+	<p>How many Fingers am I holding up?</p>
+
+	<input type="text" id="fin">
+
+	<button id="enter">Guess!</button>
+
+ 		<script type="text/javascript">
+
+		window.onload = function(){  
+
+			document.getElementById("enter").onclick = function(){
+
+				
+
+				var x = document.getElementById("fin").value;
+
+				var y = Math.floor(Math.random()*7);
+
+				if(x == y){
+					alert("Hurry! You got right Number.");
+				}else{
+					alert("Sorry! :( The right Number is " +y);
+				}
+
+
+			}
+
+
+			}
+
+		</script>
+	
+</body>
+</html>

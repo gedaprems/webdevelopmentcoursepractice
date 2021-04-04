@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+
+	<style type="text/css">
+
+		h3{
+			color: #4267B2 ;
+			font-family: serif;
+		}
+
+		#shape{
+			width: 100px;
+			height: 100px;
+			background-color: #264f85;
+			display: none;
+			position: relative;
+
+		}
+		
+		
+	</style>
+
+	
+	
+</head>
+<body >
+
+	<h3>Reactions</h3>
+
+	<p>Your time: <span id="timeTaken"></span></p>
+
+	<div id="shape"></div>
+
+	
+
+	
+ 		<script type="text/javascript">
+
+ 			//Definin Varialbles Start Time & ShortCut for Id call
+
+ 			var start = new Date().getTime();
+
+ 			function doc(){
+ 				return document.getElementById("shape");
+ 			}
+
+ 			//function for Random Color
+
+ 			function getRandomColor() {
+                
+                var letters = '0123456789ABCDEF'.split('');
+    
+                var color = '#';
+    
+                for (var i = 0; i < 6; i++ ) {
+        
+                    color += letters[Math.floor(Math.random() * 16)];
+    
+                }
+    
+                return color;
+
+            }
+
+ 			//Function for Different Shape & Color
+
+
+ 			function makeShape(){
+ 				var top = Math.random() * 400;
+ 				var left = Math.random() * 400;
+ 				var width = (Math.random() * 200)+100;
+ 				
+
+ 				//for Circle 
+
+ 				if(Math.random()>0.5){
+ 					doc().style.borderRadius = "50%";
+ 				}else{
+ 					doc().style.borderRadius= "0";
+ 				}
+
+ 				//for Background Color
+ 				doc().style.backgroundColor = getRandomColor();
+
+ 				//for Width & Height
+ 				doc().style.width = width + "px";
+ 				doc().style.height = width + "px";
+
+ 				//for Top & Left Margin
+ 				doc().style.top = top + "px";
+ 				doc().style.left = left + "px";
+
+ 				//for Display
+ 				doc().style.display = "block";
+
+
+ 				//for Setting time
+ 				start = new Date().getTime();
+ 			}
+
+
+ 			//Again Appear Shape
+
+ 			function appearAfterDelay(){
+ 				setTimeout(makeShape, Math.random() * 1500);
+ 			}
+
+
+ 			appearAfterDelay();
+
+
+
+
+
+ 			//Main code for what happen after clicking 
+
+ 			doc().onclick = function(){
+
+ 			    	//For Display
+ 				    doc().style.display=("none");
+
+
+ 				    //End time 
+ 				    var end = new Date().getTime();
+
+
+ 				    //Total Time taken
+ 				    var timeTaken= (end - start)/1000;
+
+ 				    //Printing
+ 				    document.getElementById("timeTaken").innerHTML =     timeTaken + "sec";
+
+
+ 				    appearAfterDelay();
+ 			}
+
+ 			
+
+		</script>
+	
+</body>
+</html>
+
+
+
+

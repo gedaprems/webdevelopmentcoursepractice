@@ -1,0 +1,100 @@
+1. <button id="myButton" onClick="function()">
+             My button </button > 
+       
+       is same as the javascript code
+
+    document.getElementById("myButton").onclick=function(){}
+
+
+
+2. window.onload = function(){
+        document.getElementById("myButton").onclick = function(){
+        	alert("hello their");        	
+        }}
+
+      is the solution for the unrun code
+
+  /// document.getElementById("myButton").onclick = function(){
+alert("hello their");}  ///THIS CODE NOT RUN
+
+
+3. document.getElementById("secondpara").innerHTML += " ... " + 
+ document.getElementById("text").innerHTML;
+
+     This code appends the data.
+
+
+4. in the 
+
+   innerHTML = "<h1> hello there </h1>";
+
+
+it gives:  <h1> hello there </h1>.
+
+
+
+4. var textEntered = "";
+
+textEntered = document.getElementById("textInput").value;
+
+<input id="textInput">
+
+
+
+5. array , console.log , arr.push , arr.splice
+
+
+
+    a)var myArray = new Array();
+my Array[0] = "pizza";             // adds 
+
+
+     b)var tweets = ["morning"];//Anotherway
+
+
+     c)tweets.push("add at end");
+
+
+     d)tweets.splice(1,1); // this delete element at 1 
+
+     e)SYNTAX:
+tweets.splice(index of array , number of element want to delete );
+
+      ??(WE CAN ADD AT POSITION)
+
+     f)tweets.splice(1 , 0 , "add " );
+
+
+     f) console log
+ console.log(tweets); // shows the log
+
+
+
+6. Online Guess Game
+
+
+   a)Math.random() : guess between 0 to 1
+
+   b)Math.random()*5 : guess betweern 0 to 5 (containing all float value)
+
+   c)Math.floor() : Used to whole the number ex: 2.434 to 2 
+
+   d)Math.floor(Math.random()*5): return the value from 0 to 4
+
+   e)Math.floor(Math.random()*5)+1 : return the value from 1 to 5 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+<html>
+
+<form >
+    <input type="text" name="msg" id="msg" >
+    <input type="submit" id="submit" name="submit">
+</form>
+    <div class="msg"></div>
+
+<script>
+    $(document).ready(function(){
+
+$("#submit").click(function(){
+    var name = $("#msg").val();
+    $.post("msg.php",{txt:name},function(data){
+        $('.msg').html(data);
+    })
+
+
+});
+
+});
+
+    
+</script>
+</html>

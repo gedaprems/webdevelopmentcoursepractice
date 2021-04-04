@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>5-part</title>
+	
+	<script src="./jQuery_files/jquery.min.js.download"></script>
+	
+
+	<style type="text/css">
+		#circle{
+			width: 200px;
+			height: 200px;
+			background-color: rgb(32,169,234);
+			border-radius: 50%;
+			margin-bottom: 5px;
+
+		}
+		.red_square{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			margin-bottom: 5px;
+		}
+	</style>
+</head>
+<body>
+	<h3>Fourt chapter</h3>
+	<p>Functions in JQUERY</p>
+	<h4>EXAMPLE-1</h4>
+	<div id="circle"></div>
+	
+	<h4>EXAMPLE-2</h4>
+
+	<p id="para">This is the paragraph which is going to disappear after clicking on the button.</p>
+	<button id="butout">Toggle Fade</button>
+	
+
+	<script type="text/javascript">
+
+		//EXAMPLE-1 JS		
+		$("div").click(function(){
+			$(this).fadeOut("slow",function(){				
+				alert("FadeOut has finished!");						
+			});
+			//$(this).hide();			
+		});
+
+		//EXAMPLE-2 JS
+		$("#butout").click(function(){
+			
+
+			if($("#para").css("display")=="none"){
+				$("#para").fadeIn( );
+
+			}else{
+				$("#para").fadeOut( );
+			}				
+			
+		});
+
+	</script>
+</body>
+</html>

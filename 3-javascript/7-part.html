@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+
+	<style type="text/css">
+		
+		
+	</style>
+
+	
+	
+</head>
+<body >
+
+	<h3>While Loop</h3>
+
+	<select  id="myNumber">
+		<option ></option>
+	</select> 
+
+	<button id="guess">Guess!</button>
+
+
+	
+ 		<script type="text/javascript">
+		window.onload = function(){ 
+
+			document.getElementById("guess").onclick = function(){
+
+				var mynum = document.getElementById("myNumber").value;
+
+				var gotIt = false;
+
+				var numOfguess = 1;
+
+				if(mynum>5 || mynum<0){
+					alert("Put Valid finger Number!");
+				}else{
+					while(gotIt == false){
+
+					var guessedNum = Math.floor(Math.random()*6);
+
+					if(guessedNum == mynum){
+						gotIt = true;
+
+						alert("Got it! It was a "+mynum+". It take me "+ numOfguess + " guesses. ");
+					}else{
+						numOfguess++;
+					}
+				}
+
+				}
+
+				
+			}
+			}
+
+		</script>
+	
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+
+	<script type="text/javascript">
+
+
+		window.onload = function(){
+
+
+        document.getElementById("myButton").onclick = function(){
+        	document.getElementById("secondPara").innerHTML +="....   " + document.getElementById("text").innerHTML;
+        	
+        }
+
+
+        document.getElementById("createpara").onclick = function(){
+        	document.getElementById("empty").innerHTML += "<br>This is new para append to empty para after clicking the button!";
+        }
+
+        document.getElementById("styleButton").onclick = function(){
+        	document.getElementById("styleText").style.display="none";
+        }
+
+        document.getElementById("styleButton2").onclick = function(){
+        	document.getElementById("styleText2").style.fontSize="50px";
+        }
+
+        /* style :   1)  fontSize = "px"
+                     2)  display = "none"
+                     3)  color = "red"
+
+
+
+
+		*/
+
+
+
+
+
+		}
+
+		
+
+	</script>
+	
+</head>
+<body >
+
+
+
+	<p id="text">Hello World!</p>
+
+	<button  id="myButton" >Chang  Text</button>
+
+	<p id="secondPara"> javascript is ...... </p>
+
+	<button  id="createpara">Create paragraph</button>
+    
+    <p id="empty"> </p>
+
+    <button  id="styleButton">Change Style</button>
+    
+    <p id="styleText"> This Text is going to disappear</p>
+
+    <button  id="styleButton2">Change Style</button>
+    
+    <p id="styleText2"> This Text is going to red</p>
+	
+	
+</body>
+</html>
